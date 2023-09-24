@@ -1,0 +1,333 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    background-image: url('5.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 295px 0;
+    margin: 0;
+    border-radius: 0;
+    color: #fff;
+}
+
+.text {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: colorfulText 5s infinite alternate;
+    background: linear-gradient(45deg, #f06, #9f6, rgb(232, 234, 237), #f06);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: -50px;
+}
+
+@keyframes colorfulText {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Style for the Download Button */
+.download-button {
+    margin-top: 20px;
+}
+
+.download-button a {
+    text-decoration: none;
+}
+
+.download-button button {
+    background-color: #ff5500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.download-button button:hover {
+    background-color: #ff9500;
+    transform: scale(1.05);
+}
+
+nav {
+    background-color: #0b0039;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #6a00ff;
+    color: #fff;
+}
+
+body {
+    padding-top: 50px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.portfolio-item {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+    width: 80%;
+    max-width: 100%;
+    background: linear-gradient(45deg, #0051ff, #000000);
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-photo {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%; /* Create a circular shape */
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border: 5px solid #fff; /* Add a border */
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the circular container */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add a hover effect to scale the profile photo */
+.profile-photo:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.about-description {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0; /* Initial opacity for the fade-in effect */
+    transform: translateY(20px); /* Initial position for the slide-up effect */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Use keyframes for animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animations on hover */
+.portfolio-item:hover .about-description {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.skills {
+    text-align: center;
+    color: black;            
+}
+
+.skills-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.skills-card {
+    background: linear-gradient(45deg, #320019, #1900ff); /* Gradient background for skill cards */
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s; /* Transition for transform and background */
+    max-width: 300px;
+    color: #fff; /* Text color for skill cards */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow for skill cards */
+}
+
+.skills-card:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg,  #6a00ff, #00e5ff); /* Gradient background on hover */
+}
+
+.skills-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .skills-card {
+        width: 80%;
+    }
+
+    body {
+        padding-top: 100px;
+    }
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #0b0039; /* Change the background color */
+    color: #fff;
+    text-align: center;
+    padding: 20px ;
+    
+    
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ff99cc;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #007bff;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+/* Responsive Footer Styles */
+@media screen and (max-width: 768px) {
+    .social-media {
+        margin-bottom: 20px;
+    }
+
+    .social-media a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .social-media a {
+        font-size: 18px;
+    }
+}
+
